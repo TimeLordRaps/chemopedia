@@ -2,7 +2,7 @@
   {
     "molecule_name": "Molecular Hydrogen",
     "formula": "H2",
-    "stage": "Benchmark / Industrial",
+    "stage": "Calibration",
     "week": 0,
     "n_atoms": 2,
     "n_electrons": 2,
@@ -26,11 +26,12 @@
     "n_hamiltonian_terms": 19,
     "n_commuting_groups": 3,
     "nuclear_repulsion_energy": 1.215104054054054,
-    "clinical_role": "Benchmark molecule. Industrial precursor (Haber-Bosch). Emerging neuroprotection research in HIE.",
-    "what_happens_without": "No benchmark means no calibration of simulation accuracy.",
-    "cost_to_make": "$1/kg (SMR)",
+    "n_tiles": 1,
+    "clinical_role": "Benchmark molecule. Emerging neonatal neuroprotection research in HIE.",
+    "what_happens_without": "No calibration baseline for simulation accuracy.",
+    "cost_to_make": "$1/kg",
     "access_barrier": "None",
-    "wall_time_s": 0.00010204315185546875
+    "wall_time_s": 9.799003601074219e-05
   },
   {
     "molecule_name": "Lithium Hydride",
@@ -59,14 +60,15 @@
     "n_hamiltonian_terms": 59,
     "n_commuting_groups": 3,
     "nuclear_repulsion_energy": 2.4953172413793103,
-    "clinical_role": "Quantum chemistry calibration standard. 4-qubit reference system.",
+    "n_tiles": 1,
+    "clinical_role": "Quantum chemistry calibration standard.",
     "what_happens_without": "No ground truth for simulation validation.",
-    "cost_to_make": "N/A (calibration only)",
+    "cost_to_make": "N/A",
     "access_barrier": "N/A",
-    "wall_time_s": 0.0004935264587402344
+    "wall_time_s": 0.0004944801330566406
   },
   {
-    "molecule_name": "Water (WFI)",
+    "molecule_name": "Water",
     "formula": "H2O",
     "stage": "All stages",
     "week": 0,
@@ -92,11 +94,12 @@
     "n_hamiltonian_terms": 69,
     "n_commuting_groups": 3,
     "nuclear_repulsion_energy": 10.943909496103968,
-    "clinical_role": "Solvent for all IV preparations, hydration",
+    "n_tiles": 1,
+    "clinical_role": "Solvent for all IV preparations and hydration.",
     "what_happens_without": "Dehydration. Death.",
-    "cost_to_make": "$0.001/L (distillation)",
-    "access_barrier": "WFI quality control in low-resource settings",
-    "wall_time_s": 0.0006511211395263672
+    "cost_to_make": "$0.001/L",
+    "access_barrier": "WFI quality control in LMICs",
+    "wall_time_s": 0.0006542205810546875
   },
   {
     "molecule_name": "Molecular Oxygen",
@@ -125,77 +128,46 @@
     "n_hamiltonian_terms": 99,
     "n_commuting_groups": 3,
     "nuclear_repulsion_energy": 30.53586754966888,
-    "clinical_role": "Aerobic respiration. Fetal oxygenation via placenta. Neonatal resuscitation.",
+    "n_tiles": 1,
+    "clinical_role": "Aerobic respiration. Fetal oxygenation. Neonatal resuscitation.",
     "what_happens_without": "Hypoxia. Brain damage in minutes. Death.",
-    "cost_to_make": "$0.01/L (PSA concentrator)",
-    "access_barrier": "Oxygen concentrators cost $1000+. 50% of hospitals in Sub-Saharan Africa lack reliable oxygen supply.",
-    "wall_time_s": 0.0012712478637695312
+    "cost_to_make": "$0.01/L",
+    "access_barrier": "Concentrators cost $1000+. 50% Sub-Saharan hospitals lack O2.",
+    "wall_time_s": 0.0012097358703613281
   },
   {
-    "molecule_name": "Carbon Dioxide",
-    "formula": "CO2",
-    "stage": "All stages (respiratory monitoring)",
+    "molecule_name": "Molecular Nitrogen",
+    "formula": "N2",
+    "stage": "All stages",
     "week": 0,
-    "n_atoms": 3,
-    "n_electrons": 22,
+    "n_atoms": 2,
+    "n_electrons": 14,
     "qubit_estimates": {
       "sto-3g": {
-        "n_spatial_orbitals": 15,
-        "n_qubits": 30,
-        "n_electrons": 22
+        "n_spatial_orbitals": 10,
+        "n_qubits": 20,
+        "n_electrons": 14
       },
       "6-31g": {
-        "n_spatial_orbitals": 27,
-        "n_qubits": 54,
-        "n_electrons": 22
+        "n_spatial_orbitals": 18,
+        "n_qubits": 36,
+        "n_electrons": 14
       },
       "cc-pvdz": {
-        "n_spatial_orbitals": 42,
-        "n_qubits": 84,
-        "n_electrons": 22
+        "n_spatial_orbitals": 28,
+        "n_qubits": 56,
+        "n_electrons": 14
       }
     },
-    "n_hamiltonian_terms": 149,
+    "n_hamiltonian_terms": 99,
     "n_commuting_groups": 3,
-    "nuclear_repulsion_energy": 62.141944827586215,
-    "clinical_role": "End-tidal CO\u2082 monitoring in ventilated neonates. Blood gas analysis.",
-    "what_happens_without": "Cannot assess ventilation adequacy. Blind ventilator management.",
-    "cost_to_make": "Byproduct of respiration and combustion",
-    "access_barrier": "Capnography equipment costs $2000+. Unavailable in most LMIC NICUs.",
-    "wall_time_s": 0.0027129650115966797
-  },
-  {
-    "molecule_name": "Hydrogen Peroxide",
-    "formula": "H2O2",
-    "stage": "All stages (environmental/sterilization)",
-    "week": 0,
-    "n_atoms": 4,
-    "n_electrons": 18,
-    "qubit_estimates": {
-      "sto-3g": {
-        "n_spatial_orbitals": 12,
-        "n_qubits": 24,
-        "n_electrons": 18
-      },
-      "6-31g": {
-        "n_spatial_orbitals": 22,
-        "n_qubits": 44,
-        "n_electrons": 18
-      },
-      "cc-pvdz": {
-        "n_spatial_orbitals": 38,
-        "n_qubits": 76,
-        "n_electrons": 18
-      }
-    },
-    "n_hamiltonian_terms": 119,
-    "n_commuting_groups": 3,
-    "nuclear_repulsion_energy": 38.57033721690297,
-    "clinical_role": "Surface and instrument sterilization in NICU. Anthraquinone process production.",
-    "what_happens_without": "Hospital-acquired infections. 75,000+ neonatal deaths/year from HAIs.",
-    "cost_to_make": "$0.50/L (3% solution)",
-    "access_barrier": "Universally available. Quality control matters \u2014 concentration verification.",
-    "wall_time_s": 0.0017514228820800781
+    "nuclear_repulsion_energy": 26.11536703096539,
+    "n_tiles": 1,
+    "clinical_role": "Cylinder diluent for iNO. Haber-Bosch feedstock for N-containing drugs.",
+    "what_happens_without": "No iNO delivery. No nitrogen chemistry.",
+    "cost_to_make": "$0.01/L",
+    "access_barrier": "None",
+    "wall_time_s": 0.0012717247009277344
   },
   {
     "molecule_name": "Ammonia",
@@ -224,214 +196,51 @@
     "n_hamiltonian_terms": 79,
     "n_commuting_groups": 3,
     "nuclear_repulsion_energy": 13.935804957636575,
-    "clinical_role": "Precursor to virtually all nitrogen-containing pharmaceuticals via Haber-Bosch process",
-    "what_happens_without": "No antibiotics, no amino acids, no nucleotides. Civilization collapses.",
-    "cost_to_make": "$300/ton (Haber-Bosch)",
-    "access_barrier": "Industrial commodity. No access barrier.",
-    "wall_time_s": 0.0008296966552734375
+    "n_tiles": 1,
+    "clinical_role": "Precursor to all N-containing pharmaceuticals via Haber-Bosch.",
+    "what_happens_without": "No antibiotics, no amino acids. Civilization collapses.",
+    "cost_to_make": "$300/ton",
+    "access_barrier": "None",
+    "wall_time_s": 0.0008497238159179688
   },
   {
-    "molecule_name": "Progesterone \u2014 steroid A-ring core",
-    "formula": "C6H8O",
-    "stage": "Conception",
+    "molecule_name": "Methane",
+    "formula": "CH4",
+    "stage": "Industrial precursor",
     "week": 0,
-    "n_atoms": 15,
-    "n_electrons": 52,
+    "n_atoms": 5,
+    "n_electrons": 10,
     "qubit_estimates": {
       "sto-3g": {
-        "n_spatial_orbitals": 43,
-        "n_qubits": 86,
-        "n_electrons": 52
+        "n_spatial_orbitals": 9,
+        "n_qubits": 18,
+        "n_electrons": 10
       },
       "6-31g": {
-        "n_spatial_orbitals": 79,
-        "n_qubits": 158,
-        "n_electrons": 52
+        "n_spatial_orbitals": 17,
+        "n_qubits": 34,
+        "n_electrons": 10
       },
       "cc-pvdz": {
-        "n_spatial_orbitals": 138,
-        "n_qubits": 276,
-        "n_electrons": 52
+        "n_spatial_orbitals": 34,
+        "n_qubits": 68,
+        "n_electrons": 10
       }
     },
-    "n_hamiltonian_terms": 429,
+    "n_hamiltonian_terms": 89,
     "n_commuting_groups": 3,
-    "nuclear_repulsion_energy": 309.0669182479925,
-    "clinical_role": "Maintains uterine lining, prevents miscarriage. Supplemented in high-risk pregnancies.",
-    "what_happens_without": "Luteal phase deficiency \u2192 spontaneous abortion. 10-15% of pregnancies fail from insufficient progesterone.",
-    "cost_to_make": "$0.10/dose (micronized oral)",
-    "access_barrier": "Generic but underused in threatened miscarriage protocols in LMICs",
-    "wall_time_s": 0.021197080612182617
-  },
-  {
-    "molecule_name": "Folic Acid (Pteroylglutamic acid) \u2014 pteridine ring core",
-    "formula": "C7H5N3O",
-    "stage": "Conception \u2192 Neural Tube Closure",
-    "week": 0,
-    "n_atoms": 17,
-    "n_electrons": 84,
-    "qubit_estimates": {
-      "sto-3g": {
-        "n_spatial_orbitals": 65,
-        "n_qubits": 130,
-        "n_electrons": 84
-      },
-      "6-31g": {
-        "n_spatial_orbitals": 118,
-        "n_qubits": 236,
-        "n_electrons": 84
-      },
-      "cc-pvdz": {
-        "n_spatial_orbitals": 193,
-        "n_qubits": 386,
-        "n_electrons": 84
-      }
-    },
-    "n_hamiltonian_terms": 649,
-    "n_commuting_groups": 3,
-    "nuclear_repulsion_energy": 745.4153597888976,
-    "clinical_role": "Prevents 70% of neural tube defects (spina bifida, anencephaly)",
-    "what_happens_without": "Neural tube defects: 300,000 cases/year globally. Spina bifida, anencephaly, encephalocele.",
-    "cost_to_make": "$0.01/tablet (400 mcg)",
-    "access_barrier": "Available but not supplemented in 50+ countries. WHO Essential Medicine.",
-    "wall_time_s": 0.04913687705993652
-  },
-  {
-    "molecule_name": "Iron(II) aquo complex \u2014 [Fe(H2O)]\u00b2\u207a minimal model",
-    "formula": "FeH2O",
-    "stage": "Neural Tube Closure \u2192 Term",
-    "week": 4,
-    "n_atoms": 4,
-    "n_electrons": 34,
-    "qubit_estimates": {
-      "sto-3g": {
-        "n_spatial_orbitals": 22,
-        "n_qubits": 44,
-        "n_electrons": 34
-      },
-      "6-31g": {
-        "n_spatial_orbitals": 35,
-        "n_qubits": 70,
-        "n_electrons": 34
-      },
-      "cc-pvdz": {
-        "n_spatial_orbitals": 54,
-        "n_qubits": 108,
-        "n_electrons": 34
-      }
-    },
-    "n_hamiltonian_terms": 219,
-    "n_commuting_groups": 3,
-    "nuclear_repulsion_energy": 77.72733208195855,
-    "clinical_role": "Hemoglobin synthesis, oxygen transport, fetal iron loading",
-    "what_happens_without": "Maternal anemia \u2192 preterm birth, low birth weight, neonatal anemia. Iron deficiency affects 40% of pregnancies globally.",
-    "cost_to_make": "$0.01/tablet (ferrous sulfate 325mg)",
-    "access_barrier": "Available everywhere. Compliance is the barrier \u2014 GI side effects.",
-    "wall_time_s": 0.0056819915771484375
-  },
-  {
-    "molecule_name": "Calcium ion \u2014 in phosphate context",
-    "formula": "CaO",
-    "stage": "Organogenesis \u2192 Term",
-    "week": 8,
-    "n_atoms": 2,
-    "n_electrons": 20,
-    "qubit_estimates": {
-      "sto-3g": {
-        "n_spatial_orbitals": 14,
-        "n_qubits": 28,
-        "n_electrons": 20
-      },
-      "6-31g": {
-        "n_spatial_orbitals": 22,
-        "n_qubits": 44,
-        "n_electrons": 20
-      },
-      "cc-pvdz": {
-        "n_spatial_orbitals": 32,
-        "n_qubits": 64,
-        "n_electrons": 20
-      }
-    },
-    "n_hamiltonian_terms": 139,
-    "n_commuting_groups": 3,
-    "nuclear_repulsion_energy": 32.5457358490566,
-    "clinical_role": "Skeletal mineralization, cardiac function, preeclampsia prevention",
-    "what_happens_without": "Neonatal hypocalcemia, rickets, maternal preeclampsia. WHO recommends Ca supplementation in populations with low dietary calcium.",
-    "cost_to_make": "$0.02/tablet (calcium carbonate 500mg)",
-    "access_barrier": "Cheap. Underused. WHO guideline compliance <30% in Sub-Saharan Africa.",
-    "wall_time_s": 0.002321481704711914
-  },
-  {
-    "molecule_name": "Zinc Sulfate",
-    "formula": "ZnSO4",
-    "stage": "Organogenesis \u2192 Term",
-    "week": 8,
-    "n_atoms": 6,
-    "n_electrons": 78,
-    "qubit_estimates": {
-      "sto-3g": {
-        "n_spatial_orbitals": 44,
-        "n_qubits": 88,
-        "n_electrons": 78
-      },
-      "6-31g": {
-        "n_spatial_orbitals": 71,
-        "n_qubits": 142,
-        "n_electrons": 78
-      },
-      "cc-pvdz": {
-        "n_spatial_orbitals": 104,
-        "n_qubits": 208,
-        "n_electrons": 78
-      }
-    },
-    "n_hamiltonian_terms": 439,
-    "n_commuting_groups": 3,
-    "nuclear_repulsion_energy": 576.940440598482,
-    "clinical_role": "DNA synthesis, immune function, wound healing. Zinc deficiency causes growth retardation and congenital malformations.",
-    "what_happens_without": "IUGR, immune deficiency, increased infection susceptibility in neonates",
-    "cost_to_make": "$0.01/tablet",
-    "access_barrier": "Cheap commodity. WHO-recommended for diarrhea. Underused in prenatal care.",
-    "wall_time_s": 0.02241063117980957
-  },
-  {
-    "molecule_name": "Dexamethasone \u2014 fluorinated steroid A-ring",
-    "formula": "C6H7FO",
-    "stage": "Viability Threshold (antenatal)",
-    "week": 24,
-    "n_atoms": 15,
-    "n_electrons": 60,
-    "qubit_estimates": {
-      "sto-3g": {
-        "n_spatial_orbitals": 47,
-        "n_qubits": 94,
-        "n_electrons": 60
-      },
-      "6-31g": {
-        "n_spatial_orbitals": 86,
-        "n_qubits": 172,
-        "n_electrons": 60
-      },
-      "cc-pvdz": {
-        "n_spatial_orbitals": 147,
-        "n_qubits": 294,
-        "n_electrons": 60
-      }
-    },
-    "n_hamiltonian_terms": 469,
-    "n_commuting_groups": 3,
-    "nuclear_repulsion_energy": 386.15007841341964,
-    "clinical_role": "Accelerates fetal lung maturation. The single most impactful intervention in neonatal medicine \u2014 $0.20/course, prevents RDS, saves 500,000 lives/year if universally available.",
-    "what_happens_without": "Respiratory distress syndrome. Leading cause of neonatal death in preterm infants. 1 million deaths/year from RDS.",
-    "cost_to_make": "$0.20/course (two 12mg IM injections)",
-    "access_barrier": "WHO Essential Medicine. Available but underused \u2014 10% coverage in LMICs where 99% of neonatal deaths occur.",
-    "wall_time_s": 0.025360107421875
+    "nuclear_repulsion_energy": 15.6920437790443,
+    "n_tiles": 1,
+    "clinical_role": "H2 feedstock via SMR for Haber-Bosch. Breath biomarker for gut microbiome.",
+    "what_happens_without": "No hydrogen for nitrogen chemistry.",
+    "cost_to_make": "Natural gas",
+    "access_barrier": "None",
+    "wall_time_s": 0.0009944438934326172
   },
   {
     "molecule_name": "Nitric Oxide",
     "formula": "NO",
-    "stage": "Preterm Risk \u2192 Term",
+    "stage": "Preterm\u2192Term",
     "week": 24,
     "n_atoms": 2,
     "n_electrons": 15,
@@ -455,16 +264,765 @@
     "n_hamiltonian_terms": 99,
     "n_commuting_groups": 3,
     "nuclear_repulsion_energy": 28.246231103388357,
-    "clinical_role": "Pulmonary vasodilator for persistent pulmonary hypertension of the newborn (PPHN)",
-    "what_happens_without": "~15,000 PPHN deaths/year. Patent on a tube with a hole (Mallinckrodt INOmax).",
-    "cost_to_make": "$0.10/dose from NO\u2082/N\u2082 gas cylinders",
-    "access_barrier": "Patent on electronic delivery device. Venturi bypass in chemopedia eliminates this.",
-    "wall_time_s": 0.0012278556823730469
+    "n_tiles": 1,
+    "clinical_role": "Pulmonary vasodilator for PPHN. ~15,000 deaths/year. Public domain molecule.",
+    "what_happens_without": "PPHN death. Patent on electronic delivery device (Mallinckrodt).",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "Patent on hardware, not molecule. Venturi bypass in chemopedia.",
+    "wall_time_s": 0.0012221336364746094
+  },
+  {
+    "molecule_name": "Carbon Dioxide",
+    "formula": "CO2",
+    "stage": "All stages",
+    "week": 0,
+    "n_atoms": 3,
+    "n_electrons": 22,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 15,
+        "n_qubits": 30,
+        "n_electrons": 22
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 27,
+        "n_qubits": 54,
+        "n_electrons": 22
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 42,
+        "n_qubits": 84,
+        "n_electrons": 22
+      }
+    },
+    "n_hamiltonian_terms": 149,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 62.141944827586215,
+    "n_tiles": 1,
+    "clinical_role": "Blood gas monitoring guides every NICU ventilator decision.",
+    "what_happens_without": "Blind ventilator management. IVH and ischemia risk.",
+    "cost_to_make": "Byproduct",
+    "access_barrier": "Capnography equipment $2000+",
+    "wall_time_s": 0.002703428268432617
+  },
+  {
+    "molecule_name": "Hydrogen Peroxide",
+    "formula": "H2O2",
+    "stage": "All stages",
+    "week": 0,
+    "n_atoms": 4,
+    "n_electrons": 18,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 12,
+        "n_qubits": 24,
+        "n_electrons": 18
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 22,
+        "n_qubits": 44,
+        "n_electrons": 18
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 38,
+        "n_qubits": 76,
+        "n_electrons": 18
+      }
+    },
+    "n_hamiltonian_terms": 119,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 38.57033721690297,
+    "n_tiles": 1,
+    "clinical_role": "VHP sterilization of incubators. BPD biomarker in exhaled breath.",
+    "what_happens_without": "HAIs kill 75,000+ neonates/year.",
+    "cost_to_make": "$0.50/L",
+    "access_barrier": "Universally available",
+    "wall_time_s": 0.0017848014831542969
+  },
+  {
+    "molecule_name": "Progesterone",
+    "formula": "C21H30O2",
+    "stage": "Conception",
+    "week": 0,
+    "n_atoms": 53,
+    "n_electrons": 172,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 145,
+        "n_qubits": 290,
+        "n_electrons": 172
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 267,
+        "n_qubits": 534,
+        "n_electrons": 172
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 472,
+        "n_qubits": 944,
+        "n_electrons": 172
+      }
+    },
+    "n_hamiltonian_terms": 1442,
+    "n_commuting_groups": 24,
+    "nuclear_repulsion_energy": 458.64107717914567,
+    "n_tiles": 8,
+    "clinical_role": "Maintains uterine lining. Prevents miscarriage. Supplemented in high-risk pregnancies.",
+    "what_happens_without": "Luteal phase deficiency -> spontaneous abortion. 10-15% of pregnancies fail.",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "Generic. Underused in LMIC threatened-miscarriage protocols.",
+    "wall_time_s": 0.0647575855255127
+  },
+  {
+    "molecule_name": "Estradiol",
+    "formula": "C18H24O2",
+    "stage": "Conception",
+    "week": 0,
+    "n_atoms": 44,
+    "n_electrons": 148,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 124,
+        "n_qubits": 248,
+        "n_electrons": 148
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 228,
+        "n_qubits": 456,
+        "n_electrons": 148
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 400,
+        "n_qubits": 800,
+        "n_electrons": 148
+      }
+    },
+    "n_hamiltonian_terms": 1236,
+    "n_commuting_groups": 12,
+    "nuclear_repulsion_energy": 584.5749663871159,
+    "n_tiles": 4,
+    "clinical_role": "Primary estrogen. Drives endometrial growth, placental vascularization.",
+    "what_happens_without": "Failed implantation. Inadequate placental development.",
+    "cost_to_make": "$0.05/dose",
+    "access_barrier": "Generic.",
+    "wall_time_s": 0.07268929481506348
+  },
+  {
+    "molecule_name": "Folic Acid",
+    "formula": "C19H19N7O6",
+    "stage": "Conception->Neural Tube",
+    "week": 0,
+    "n_atoms": 51,
+    "n_electrons": 230,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 179,
+        "n_qubits": 358,
+        "n_electrons": 230
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 326,
+        "n_qubits": 652,
+        "n_electrons": 230
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 543,
+        "n_qubits": 1086,
+        "n_electrons": 230
+      }
+    },
+    "n_hamiltonian_terms": 1783,
+    "n_commuting_groups": 21,
+    "nuclear_repulsion_energy": 814.737365071126,
+    "n_tiles": 7,
+    "clinical_role": "Prevents 70% of neural tube defects (spina bifida, anencephaly).",
+    "what_happens_without": "300,000 NTD cases/year globally. Spina bifida, anencephaly, encephalocele.",
+    "cost_to_make": "$0.01/tablet",
+    "access_barrier": "Available but not supplemented in 50+ countries. WHO EML.",
+    "wall_time_s": 0.09324169158935547
+  },
+  {
+    "molecule_name": "Iron(II) hexaaquo complex",
+    "formula": "[Fe(H2O)6]2+",
+    "stage": "Neural Tube->Term",
+    "week": 4,
+    "n_atoms": 19,
+    "n_electrons": 84,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 57,
+        "n_qubits": 114,
+        "n_electrons": 84
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 100,
+        "n_qubits": 200,
+        "n_electrons": 84
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 174,
+        "n_qubits": 348,
+        "n_electrons": 84
+      }
+    },
+    "n_hamiltonian_terms": 568,
+    "n_commuting_groups": 6,
+    "nuclear_repulsion_energy": 303.2224913110649,
+    "n_tiles": 2,
+    "clinical_role": "Hemoglobin synthesis, oxygen transport, fetal iron loading.",
+    "what_happens_without": "Maternal anemia -> preterm birth, low birth weight. 40% of pregnancies.",
+    "cost_to_make": "$0.01/tablet",
+    "access_barrier": "Available. GI side effects limit compliance.",
+    "wall_time_s": 0.02832818031311035
+  },
+  {
+    "molecule_name": "Retinoic Acid",
+    "formula": "C20H28O2",
+    "stage": "Organogenesis",
+    "week": 8,
+    "n_atoms": 50,
+    "n_electrons": 164,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 138,
+        "n_qubits": 276,
+        "n_electrons": 164
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 254,
+        "n_qubits": 508,
+        "n_electrons": 164
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 448,
+        "n_qubits": 896,
+        "n_electrons": 164
+      }
+    },
+    "n_hamiltonian_terms": 1374,
+    "n_commuting_groups": 18,
+    "nuclear_repulsion_energy": 545.0574799456188,
+    "n_tiles": 6,
+    "clinical_role": "Active Vitamin A form. Directs limb patterning, organ morphogenesis, lung development.",
+    "what_happens_without": "Congenital malformations. Impaired lung epithelial differentiation.",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "Teratogenic at high doses. Dosing critical.",
+    "wall_time_s": 0.06670498847961426
+  },
+  {
+    "molecule_name": "Calcium Carbonate",
+    "formula": "CaCO3",
+    "stage": "Organogenesis->Term",
+    "week": 8,
+    "n_atoms": 5,
+    "n_electrons": 50,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 30,
+        "n_qubits": 60,
+        "n_electrons": 50
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 53,
+        "n_qubits": 106,
+        "n_electrons": 50
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 76,
+        "n_qubits": 152,
+        "n_electrons": 50
+      }
+    },
+    "n_hamiltonian_terms": 299,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 223.30576078989787,
+    "n_tiles": 1,
+    "clinical_role": "Skeletal mineralization, cardiac function, preeclampsia prevention.",
+    "what_happens_without": "Neonatal hypocalcemia, rickets. <30% WHO guideline compliance in SSA.",
+    "cost_to_make": "$0.02/tablet",
+    "access_barrier": "Cheap. Underused.",
+    "wall_time_s": 0.015001535415649414
+  },
+  {
+    "molecule_name": "Zinc Sulfate",
+    "formula": "ZnSO4",
+    "stage": "Organogenesis->Term",
+    "week": 8,
+    "n_atoms": 6,
+    "n_electrons": 78,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 44,
+        "n_qubits": 88,
+        "n_electrons": 78
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 71,
+        "n_qubits": 142,
+        "n_electrons": 78
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 104,
+        "n_qubits": 208,
+        "n_electrons": 78
+      }
+    },
+    "n_hamiltonian_terms": 439,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 576.940440598482,
+    "n_tiles": 1,
+    "clinical_role": "DNA synthesis, immune function. Deficiency causes growth retardation.",
+    "what_happens_without": "IUGR, immune deficiency, infection susceptibility.",
+    "cost_to_make": "$0.01/tablet",
+    "access_barrier": "Cheap. WHO-recommended. Underused in prenatal care.",
+    "wall_time_s": 0.03674888610839844
+  },
+  {
+    "molecule_name": "DHA",
+    "formula": "C22H32O2",
+    "stage": "Fetal Growth",
+    "week": 12,
+    "n_atoms": 56,
+    "n_electrons": 180,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 152,
+        "n_qubits": 304,
+        "n_electrons": 180
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 280,
+        "n_qubits": 560,
+        "n_electrons": 180
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 496,
+        "n_qubits": 992,
+        "n_electrons": 180
+      }
+    },
+    "n_hamiltonian_terms": 1512,
+    "n_commuting_groups": 24,
+    "nuclear_repulsion_energy": 500.18768361213483,
+    "n_tiles": 8,
+    "clinical_role": "Docosahexaenoic acid. Brain myelination, retinal development.",
+    "what_happens_without": "Impaired neurodevelopment. Reduced cognitive outcomes in preterm infants.",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "Fish oil supplements widely available.",
+    "wall_time_s": 0.053771018981933594
+  },
+  {
+    "molecule_name": "Thyroxine",
+    "formula": "C15H11I4NO4",
+    "stage": "Fetal Growth",
+    "week": 12,
+    "n_atoms": 35,
+    "n_electrons": 352,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 183,
+        "n_qubits": 366,
+        "n_electrons": 352
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 322,
+        "n_qubits": 644,
+        "n_electrons": 352
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 515,
+        "n_qubits": 1030,
+        "n_electrons": 352
+      }
+    },
+    "n_hamiltonian_terms": 1826,
+    "n_commuting_groups": 12,
+    "nuclear_repulsion_energy": 5221.662622828361,
+    "n_tiles": 4,
+    "clinical_role": "T4 thyroid hormone. CNS development. Maternal T4 crosses placenta until week 20.",
+    "what_happens_without": "Congenital hypothyroidism -> cretinism if untreated. Mandatory newborn screen.",
+    "cost_to_make": "$0.05/dose",
+    "access_barrier": "Generic levothyroxine. Screening is the barrier in LMICs.",
+    "wall_time_s": 0.20894432067871094
+  },
+  {
+    "molecule_name": "Dexamethasone",
+    "formula": "C22H29FO5",
+    "stage": "Viability (antenatal)",
+    "week": 24,
+    "n_atoms": 57,
+    "n_electrons": 210,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 169,
+        "n_qubits": 338,
+        "n_electrons": 210
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 310,
+        "n_qubits": 620,
+        "n_electrons": 210
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 537,
+        "n_qubits": 1074,
+        "n_electrons": 210
+      }
+    },
+    "n_hamiltonian_terms": 1682,
+    "n_commuting_groups": 24,
+    "nuclear_repulsion_energy": 650.0583101971444,
+    "n_tiles": 8,
+    "clinical_role": "Antenatal steroid. Reduces RDS 34%, death 25%, IVH 50%. WHO EML. $0.20/course saves 500k lives/year.",
+    "what_happens_without": "RDS. Leading cause of neonatal death in preterm. 1M deaths/year.",
+    "cost_to_make": "$0.20/course",
+    "access_barrier": "10% coverage in LMICs where 99% of deaths occur.",
+    "wall_time_s": 0.06410622596740723
+  },
+  {
+    "molecule_name": "Magnesium Sulfate",
+    "formula": "MgSO4",
+    "stage": "Viability (antenatal)",
+    "week": 24,
+    "n_atoms": 6,
+    "n_electrons": 60,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 38,
+        "n_qubits": 76,
+        "n_electrons": 60
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 62,
+        "n_qubits": 124,
+        "n_electrons": 60
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 92,
+        "n_qubits": 184,
+        "n_electrons": 60
+      }
+    },
+    "n_hamiltonian_terms": 379,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 391.2176043357568,
+    "n_tiles": 1,
+    "clinical_role": "Antenatal neuroprotectant. Reduces CP 30-40% (BEAM trial). NMDA antagonist.",
+    "what_happens_without": "Excitotoxic brain injury in preterm birth.",
+    "cost_to_make": "$2/course",
+    "access_barrier": "WHO EML. Protocol adoption is the barrier.",
+    "wall_time_s": 0.026228904724121094
+  },
+  {
+    "molecule_name": "SP-B Peptide Bond Mimic",
+    "formula": "C3H7NO",
+    "stage": "Viability",
+    "week": 24,
+    "n_atoms": 12,
+    "n_electrons": 40,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 32,
+        "n_qubits": 64,
+        "n_electrons": 40
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 59,
+        "n_qubits": 118,
+        "n_electrons": 40
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 105,
+        "n_qubits": 210,
+        "n_electrons": 40
+      }
+    },
+    "n_hamiltonian_terms": 319,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 167.30565754269463,
+    "n_tiles": 1,
+    "clinical_role": "N-methylacetamide \u2014 peptide bond mimic for SP-B surfactant protein. SP-B required for alveolar stability.",
+    "what_happens_without": "Lung collapse at end-expiration. RDS kills ~1M preterm neonates/year.",
+    "cost_to_make": "$5/dose",
+    "access_barrier": "GMP formulation and distribution.",
+    "wall_time_s": 0.019155025482177734
+  },
+  {
+    "molecule_name": "Ag4 Antimicrobial Cluster",
+    "formula": "Ag4",
+    "stage": "NICU",
+    "week": 28,
+    "n_atoms": 4,
+    "n_electrons": 188,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 100,
+        "n_qubits": 200,
+        "n_electrons": 188
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 160,
+        "n_qubits": 320,
+        "n_electrons": 188
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 220,
+        "n_qubits": 440,
+        "n_electrons": 188
+      }
+    },
+    "n_hamiltonian_terms": 999,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 2452.041513304887,
+    "n_tiles": 1,
+    "clinical_role": "Silver nanoparticle antimicrobial. CLABSI reduction 30-50% on coated CVCs.",
+    "what_happens_without": "75,000+ neonatal HAI deaths/year.",
+    "cost_to_make": "$1/coating",
+    "access_barrier": "Catheter coating process.",
+    "wall_time_s": 0.14497089385986328
+  },
+  {
+    "molecule_name": "Urea",
+    "formula": "CH4N2O",
+    "stage": "NICU monitoring",
+    "week": 28,
+    "n_atoms": 8,
+    "n_electrons": 32,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 24,
+        "n_qubits": 48,
+        "n_electrons": 32
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 44,
+        "n_qubits": 88,
+        "n_electrons": 32
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 76,
+        "n_qubits": 152,
+        "n_electrons": 32
+      }
+    },
+    "n_hamiltonian_terms": 239,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 112.93002259232982,
+    "n_tiles": 1,
+    "clinical_role": "BUN marker for renal function. Neonatal AKI affects 20-30% of critically ill neonates.",
+    "what_happens_without": "Undetected AKI. Wrong drug dosing. Organ failure.",
+    "cost_to_make": "Diagnostic",
+    "access_barrier": "i-STAT cartridge cost.",
+    "wall_time_s": 0.006846189498901367
+  },
+  {
+    "molecule_name": "Glycolic Acid",
+    "formula": "C2H4O3",
+    "stage": "NICU (PLGA co-monomer)",
+    "week": 28,
+    "n_atoms": 9,
+    "n_electrons": 40,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 29,
+        "n_qubits": 58,
+        "n_electrons": 40
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 53,
+        "n_qubits": 106,
+        "n_electrons": 40
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 90,
+        "n_qubits": 180,
+        "n_electrons": 40
+      }
+    },
+    "n_hamiltonian_terms": 289,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 164.56826219150133,
+    "n_tiles": 1,
+    "clinical_role": "PLGA drug delivery co-monomer. Sustained-release eliminates repeated IV access.",
+    "what_happens_without": "Repeated IV access -> CLABSI risk.",
+    "cost_to_make": "$5/g",
+    "access_barrier": "Polymer synthesis infrastructure.",
+    "wall_time_s": 0.00978398323059082
+  },
+  {
+    "molecule_name": "Glycine",
+    "formula": "C2H5NO2",
+    "stage": "NICU TPN",
+    "week": 28,
+    "n_atoms": 10,
+    "n_electrons": 40,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 30,
+        "n_qubits": 60,
+        "n_electrons": 40
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 55,
+        "n_qubits": 110,
+        "n_electrons": 40
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 95,
+        "n_qubits": 190,
+        "n_electrons": 40
+      }
+    },
+    "n_hamiltonian_terms": 299,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 166.05995792280595,
+    "n_tiles": 1,
+    "clinical_role": "Simplest amino acid, essential in neonatal TPN for protein synthesis.",
+    "what_happens_without": "Hypoproteinemia and growth failure within days.",
+    "cost_to_make": "$1/g",
+    "access_barrier": "TPN compounding capability.",
+    "wall_time_s": 0.01055288314819336
+  },
+  {
+    "molecule_name": "Lactic Acid",
+    "formula": "C3H6O3",
+    "stage": "NICU (PLA nanoparticles)",
+    "week": 28,
+    "n_atoms": 12,
+    "n_electrons": 48,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 36,
+        "n_qubits": 72,
+        "n_electrons": 48
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 66,
+        "n_qubits": 132,
+        "n_electrons": 48
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 114,
+        "n_qubits": 228,
+        "n_electrons": 48
+      }
+    },
+    "n_hamiltonian_terms": 359,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 224.5149854176432,
+    "n_tiles": 1,
+    "clinical_role": "PLA nanoparticle monomer. 100-300nm optimal for pulmonary drug delivery in RDS.",
+    "what_happens_without": "Continuous infusion required instead of once-daily dosing.",
+    "cost_to_make": "$2/g",
+    "access_barrier": "Polymer synthesis.",
+    "wall_time_s": 0.01493978500366211
+  },
+  {
+    "molecule_name": "Alanine",
+    "formula": "C3H7NO2",
+    "stage": "NICU TPN",
+    "week": 28,
+    "n_atoms": 13,
+    "n_electrons": 48,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 37,
+        "n_qubits": 74,
+        "n_electrons": 48
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 68,
+        "n_qubits": 136,
+        "n_electrons": 48
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 119,
+        "n_qubits": 238,
+        "n_electrons": 48
+      }
+    },
+    "n_hamiltonian_terms": 368,
+    "n_commuting_groups": 6,
+    "nuclear_repulsion_energy": 137.5609036776041,
+    "n_tiles": 2,
+    "clinical_role": "L-Alanine in neonatal TPN. Feeds gluconeogenesis in immature neonatal liver.",
+    "what_happens_without": "Hypoglycemia in preterm/SGA infants who lack glycogen stores.",
+    "cost_to_make": "$1/g",
+    "access_barrier": "TPN infrastructure.",
+    "wall_time_s": 0.012003660202026367
+  },
+  {
+    "molecule_name": "Creatinine",
+    "formula": "C4H7N3O",
+    "stage": "NICU monitoring",
+    "week": 28,
+    "n_atoms": 15,
+    "n_electrons": 60,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 47,
+        "n_qubits": 94,
+        "n_electrons": 60
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 86,
+        "n_qubits": 172,
+        "n_electrons": 60
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 147,
+        "n_qubits": 294,
+        "n_electrons": 60
+      }
+    },
+    "n_hamiltonian_terms": 468,
+    "n_commuting_groups": 6,
+    "nuclear_repulsion_energy": 200.67589273870476,
+    "n_tiles": 2,
+    "clinical_role": "Serum creatinine: primary neonatal renal function marker.",
+    "what_happens_without": "Undetected AKI. Wrong vancomycin/aminoglycoside dosing.",
+    "cost_to_make": "Diagnostic",
+    "access_barrier": "Point-of-care device cost.",
+    "wall_time_s": 0.021184921264648438
+  },
+  {
+    "molecule_name": "Taurine",
+    "formula": "C2H7NO3S",
+    "stage": "NICU TPN",
+    "week": 28,
+    "n_atoms": 14,
+    "n_electrons": 66,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 46,
+        "n_qubits": 92,
+        "n_electrons": 66
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 81,
+        "n_qubits": 162,
+        "n_electrons": 66
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 137,
+        "n_qubits": 274,
+        "n_electrons": 66
+      }
+    },
+    "n_hamiltonian_terms": 458,
+    "n_commuting_groups": 6,
+    "nuclear_repulsion_energy": 230.2627633553347,
+    "n_tiles": 2,
+    "clinical_role": "Most abundant free amino acid in neonatal brain/retina. Cannot synthesize before 34wk.",
+    "what_happens_without": "Auditory brainstem abnormalities, retinal degeneration, neurodevelopmental delay.",
+    "cost_to_make": "$0.50/day",
+    "access_barrier": "Mandatory in preterm TPN.",
+    "wall_time_s": 0.019496679306030273
   },
   {
     "molecule_name": "Sodium Bicarbonate",
     "formula": "NaHCO3",
-    "stage": "Preterm \u2192 Term (NICU)",
+    "stage": "NICU",
     "week": 28,
     "n_atoms": 6,
     "n_electrons": 42,
@@ -488,10 +1046,691 @@
     "n_hamiltonian_terms": 299,
     "n_commuting_groups": 3,
     "nuclear_repulsion_energy": 177.7075364206419,
-    "clinical_role": "Corrects metabolic acidosis in critically ill neonates",
-    "what_happens_without": "Uncorrected acidosis \u2192 cardiac dysfunction, organ failure",
-    "cost_to_make": "$0.05/vial (8.4% solution)",
-    "access_barrier": "Commodity chemical. Access limited only by IV preparation infrastructure.",
-    "wall_time_s": 0.010393381118774414
+    "n_tiles": 1,
+    "clinical_role": "Emergency IV correction of metabolic acidosis in preterm infants.",
+    "what_happens_without": "Uncorrected acidosis -> cardiac dysfunction, organ failure.",
+    "cost_to_make": "$0.05/vial",
+    "access_barrier": "IV preparation infrastructure.",
+    "wall_time_s": 0.01676011085510254
+  },
+  {
+    "molecule_name": "Fluconazole",
+    "formula": "C13H12F2N6O",
+    "stage": "NICU",
+    "week": 28,
+    "n_atoms": 34,
+    "n_electrons": 158,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 122,
+        "n_qubits": 244,
+        "n_electrons": 158
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 222,
+        "n_qubits": 444,
+        "n_electrons": 158
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 368,
+        "n_qubits": 736,
+        "n_electrons": 158
+      }
+    },
+    "n_hamiltonian_terms": 1216,
+    "n_commuting_groups": 12,
+    "nuclear_repulsion_energy": 629.3602265262078,
+    "n_tiles": 4,
+    "clinical_role": "Antifungal. Prophylaxis reduces invasive candidiasis 75-90% in VLBW.",
+    "what_happens_without": "Candida: 3rd most common late-onset sepsis, 20-30% mortality.",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "Institutional prophylaxis policy.",
+    "wall_time_s": 0.0725860595703125
+  },
+  {
+    "molecule_name": "Midazolam",
+    "formula": "C18H13ClFN3",
+    "stage": "NICU",
+    "week": 28,
+    "n_atoms": 36,
+    "n_electrons": 168,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 132,
+        "n_qubits": 264,
+        "n_electrons": 168
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 237,
+        "n_qubits": 474,
+        "n_electrons": 168
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 391,
+        "n_qubits": 782,
+        "n_electrons": 168
+      }
+    },
+    "n_hamiltonian_terms": 1316,
+    "n_commuting_groups": 12,
+    "nuclear_repulsion_energy": 716.0357849415155,
+    "n_tiles": 4,
+    "clinical_role": "Benzodiazepine for NICU sedation and second-line neonatal seizures.",
+    "what_happens_without": "Inadequate sedation during ventilation. Uncontrolled seizures.",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "Generic.",
+    "wall_time_s": 0.10033893585205078
+  },
+  {
+    "molecule_name": "Milrinone",
+    "formula": "C12H9N3O",
+    "stage": "NICU cardiac",
+    "week": 28,
+    "n_atoms": 25,
+    "n_electrons": 110,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 89,
+        "n_qubits": 178,
+        "n_electrons": 110
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 162,
+        "n_qubits": 324,
+        "n_electrons": 110
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 269,
+        "n_qubits": 538,
+        "n_electrons": 110
+      }
+    },
+    "n_hamiltonian_terms": 887,
+    "n_commuting_groups": 9,
+    "nuclear_repulsion_energy": 406.2291953359869,
+    "n_tiles": 3,
+    "clinical_role": "PDE3 inhibitor for low cardiac output post-surgery, refractory PPHN.",
+    "what_happens_without": "Cardiac failure post-surgery. No fallback after dopamine/dobutamine fail.",
+    "cost_to_make": "$5/dose",
+    "access_barrier": "Generic.",
+    "wall_time_s": 0.053557634353637695
+  },
+  {
+    "molecule_name": "Furosemide",
+    "formula": "C12H11ClN2O5S",
+    "stage": "NICU",
+    "week": 28,
+    "n_atoms": 32,
+    "n_electrons": 170,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 124,
+        "n_qubits": 248,
+        "n_electrons": 170
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 219,
+        "n_qubits": 438,
+        "n_electrons": 170
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 357,
+        "n_qubits": 714,
+        "n_electrons": 170
+      }
+    },
+    "n_hamiltonian_terms": 1236,
+    "n_commuting_groups": 12,
+    "nuclear_repulsion_energy": 697.5337072177794,
+    "n_tiles": 4,
+    "clinical_role": "Loop diuretic. Used in >80% of premature infants for pulmonary edema, BPD.",
+    "what_happens_without": "Pulmonary edema. Fluid overload.",
+    "cost_to_make": "$0.02/dose",
+    "access_barrier": "None. Workhorse of NICU fluid management.",
+    "wall_time_s": 0.07364058494567871
+  },
+  {
+    "molecule_name": "Glutamate",
+    "formula": "C5H9NO4",
+    "stage": "NICU (target molecule)",
+    "week": 28,
+    "n_atoms": 19,
+    "n_electrons": 78,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 59,
+        "n_qubits": 118,
+        "n_electrons": 78
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 108,
+        "n_qubits": 216,
+        "n_electrons": 78
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 185,
+        "n_qubits": 370,
+        "n_electrons": 78
+      }
+    },
+    "n_hamiltonian_terms": 588,
+    "n_commuting_groups": 6,
+    "nuclear_repulsion_energy": 320.3467378015873,
+    "n_tiles": 2,
+    "clinical_role": "Excitotoxic target. During HIE: glutamate flood -> NMDA -> Ca2+ -> neuronal death.",
+    "what_happens_without": "HIE: leading cause of neonatal death + permanent disability. 1-4/1000 births.",
+    "cost_to_make": "Target, not drug",
+    "access_barrier": "Translation from target to drug.",
+    "wall_time_s": 0.02821826934814453
+  },
+  {
+    "molecule_name": "Vitamin C",
+    "formula": "C6H8O6",
+    "stage": "NICU",
+    "week": 28,
+    "n_atoms": 20,
+    "n_electrons": 92,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 68,
+        "n_qubits": 136,
+        "n_electrons": 92
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 124,
+        "n_qubits": 248,
+        "n_electrons": 92
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 208,
+        "n_qubits": 416,
+        "n_electrons": 92
+      }
+    },
+    "n_hamiltonian_terms": 678,
+    "n_commuting_groups": 6,
+    "nuclear_repulsion_energy": 410.21152740289403,
+    "n_tiles": 2,
+    "clinical_role": "Antioxidant reduces BPD and ROP. Required for collagen/alveolar wall development.",
+    "what_happens_without": "BPD, ROP \u2014 permanent lung damage and blindness.",
+    "cost_to_make": "$0.05/day",
+    "access_barrier": "Standard in preterm TPN.",
+    "wall_time_s": 0.04061698913574219
+  },
+  {
+    "molecule_name": "Epinephrine",
+    "formula": "C9H13NO3",
+    "stage": "NICU resuscitation",
+    "week": 28,
+    "n_atoms": 26,
+    "n_electrons": 98,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 78,
+        "n_qubits": 156,
+        "n_electrons": 98
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 143,
+        "n_qubits": 286,
+        "n_electrons": 98
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 247,
+        "n_qubits": 494,
+        "n_electrons": 98
+      }
+    },
+    "n_hamiltonian_terms": 776,
+    "n_commuting_groups": 12,
+    "nuclear_repulsion_energy": 282.93343817295784,
+    "n_tiles": 4,
+    "clinical_role": "Drug for neonatal cardiac arrest. NRP 2020: IV epinephrine if HR<60 after compressions.",
+    "what_happens_without": "Neonatal cardiac arrest -> death.",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "None.",
+    "wall_time_s": 0.02683734893798828
+  },
+  {
+    "molecule_name": "Phenobarbital",
+    "formula": "C12H12N2O3",
+    "stage": "NICU seizures",
+    "week": 28,
+    "n_atoms": 29,
+    "n_electrons": 122,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 97,
+        "n_qubits": 194,
+        "n_electrons": 122
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 177,
+        "n_qubits": 354,
+        "n_electrons": 122
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 298,
+        "n_qubits": 596,
+        "n_electrons": 122
+      }
+    },
+    "n_hamiltonian_terms": 966,
+    "n_commuting_groups": 12,
+    "nuclear_repulsion_energy": 408.7247080777924,
+    "n_tiles": 4,
+    "clinical_role": "First-line anticonvulsant for neonatal seizures. WHO EML. Since 1903.",
+    "what_happens_without": "Untreated seizures -> cytotoxic edema, permanent brain damage.",
+    "cost_to_make": "$0.05/dose",
+    "access_barrier": "None.",
+    "wall_time_s": 0.04694795608520508
+  },
+  {
+    "molecule_name": "Morphine",
+    "formula": "C17H19NO3",
+    "stage": "NICU pain",
+    "week": 28,
+    "n_atoms": 40,
+    "n_electrons": 152,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 124,
+        "n_qubits": 248,
+        "n_electrons": 152
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 227,
+        "n_qubits": 454,
+        "n_electrons": 152
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 389,
+        "n_qubits": 778,
+        "n_electrons": 152
+      }
+    },
+    "n_hamiltonian_terms": 1236,
+    "n_commuting_groups": 12,
+    "nuclear_repulsion_energy": 602.4574998431542,
+    "n_tiles": 4,
+    "clinical_role": "Primary opioid for ventilated infants, post-surgical, NAS withdrawal.",
+    "what_happens_without": "Uncontrolled neonatal pain. Increased IVH risk (NEOPAIN trial).",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "None.",
+    "wall_time_s": 0.06644964218139648
+  },
+  {
+    "molecule_name": "Bilirubin",
+    "formula": "C33H36N4O6",
+    "stage": "NICU monitoring",
+    "week": 28,
+    "n_atoms": 79,
+    "n_electrons": 310,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 251,
+        "n_qubits": 502,
+        "n_electrons": 310
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 459,
+        "n_qubits": 918,
+        "n_electrons": 310
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 782,
+        "n_qubits": 1564,
+        "n_electrons": 310
+      }
+    },
+    "n_hamiltonian_terms": 2502,
+    "n_commuting_groups": 24,
+    "nuclear_repulsion_energy": 1239.711653478426,
+    "n_tiles": 8,
+    "clinical_role": "Jaundice biomarker. >20 mg/dL -> kernicterus: permanent basal ganglia damage or death.",
+    "what_happens_without": "Kernicterus. Preventable death in LMICs today.",
+    "cost_to_make": "Measurement target",
+    "access_barrier": "Bilirubinometer + phototherapy availability.",
+    "wall_time_s": 0.14516806602478027
+  },
+  {
+    "molecule_name": "PEG (diethylene glycol)",
+    "formula": "C4H10O3",
+    "stage": "NICU (drug delivery)",
+    "week": 28,
+    "n_atoms": 17,
+    "n_electrons": 58,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 45,
+        "n_qubits": 90,
+        "n_electrons": 58
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 83,
+        "n_qubits": 166,
+        "n_electrons": 58
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 148,
+        "n_qubits": 296,
+        "n_electrons": 58
+      }
+    },
+    "n_hamiltonian_terms": 448,
+    "n_commuting_groups": 6,
+    "nuclear_repulsion_energy": 200.29887348734533,
+    "n_tiles": 2,
+    "clinical_role": "PEGylation extends biologic half-life 2-10x. Fewer doses, less IV, less infection.",
+    "what_happens_without": "Rapid renal clearance of biologics. More IV access needed.",
+    "cost_to_make": "$5/g",
+    "access_barrier": "Polymer synthesis.",
+    "wall_time_s": 0.019418954849243164
+  },
+  {
+    "molecule_name": "Palmitic Acid",
+    "formula": "C16H32O2",
+    "stage": "NICU surfactant",
+    "week": 28,
+    "n_atoms": 50,
+    "n_electrons": 144,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 122,
+        "n_qubits": 244,
+        "n_electrons": 144
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 226,
+        "n_qubits": 452,
+        "n_electrons": 144
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 412,
+        "n_qubits": 824,
+        "n_electrons": 144
+      }
+    },
+    "n_hamiltonian_terms": 1214,
+    "n_commuting_groups": 18,
+    "nuclear_repulsion_energy": 441.16586778269965,
+    "n_tiles": 6,
+    "clinical_role": "Primary fatty acid of DPPC lung surfactant. DPPC = 40% of surfactant lipid.",
+    "what_happens_without": "Alveolar collapse without DPPC. RDS.",
+    "cost_to_make": "$1/g",
+    "access_barrier": "DPPC synthesis infrastructure.",
+    "wall_time_s": 0.051604509353637695
+  },
+  {
+    "molecule_name": "Hydrocortisone",
+    "formula": "C21H30O5",
+    "stage": "NICU",
+    "week": 28,
+    "n_atoms": 56,
+    "n_electrons": 196,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 160,
+        "n_qubits": 320,
+        "n_electrons": 196
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 294,
+        "n_qubits": 588,
+        "n_electrons": 196
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 514,
+        "n_qubits": 1028,
+        "n_electrons": 196
+      }
+    },
+    "n_hamiltonian_terms": 1592,
+    "n_commuting_groups": 24,
+    "nuclear_repulsion_energy": 576.2059831163306,
+    "n_tiles": 8,
+    "clinical_role": "Adrenal insufficiency (~50% VLBW) and refractory hypotension. PREMILOC trial.",
+    "what_happens_without": "Vascular collapse when dopamine/dobutamine fail.",
+    "cost_to_make": "$1/dose",
+    "access_barrier": "Generic.",
+    "wall_time_s": 0.05723285675048828
+  },
+  {
+    "molecule_name": "PGE1 (Alprostadil)",
+    "formula": "C20H34O5",
+    "stage": "NICU cardiac",
+    "week": 28,
+    "n_atoms": 59,
+    "n_electrons": 194,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 159,
+        "n_qubits": 318,
+        "n_electrons": 194
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 293,
+        "n_qubits": 586,
+        "n_electrons": 194
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 520,
+        "n_qubits": 1040,
+        "n_electrons": 194
+      }
+    },
+    "n_hamiltonian_terms": 1582,
+    "n_commuting_groups": 24,
+    "nuclear_repulsion_energy": 581.5512925223439,
+    "n_tiles": 8,
+    "clinical_role": "Keeps ductus arteriosus open in cyanotic CHD. Bridge to operating room.",
+    "what_happens_without": "Death within 24-48hr in ductal-dependent CHD (HLHS, pulmonary atresia).",
+    "cost_to_make": "$5/dose",
+    "access_barrier": "Cold chain. Reconstitute just before use.",
+    "wall_time_s": 0.06235218048095703
+  },
+  {
+    "molecule_name": "Vitamin A (Retinol)",
+    "formula": "C20H30O",
+    "stage": "NICU",
+    "week": 28,
+    "n_atoms": 51,
+    "n_electrons": 158,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 135,
+        "n_qubits": 270,
+        "n_electrons": 158
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 249,
+        "n_qubits": 498,
+        "n_electrons": 158
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 444,
+        "n_qubits": 888,
+        "n_electrons": 158
+      }
+    },
+    "n_hamiltonian_terms": 1343,
+    "n_commuting_groups": 21,
+    "nuclear_repulsion_energy": 449.334194805594,
+    "n_tiles": 7,
+    "clinical_role": "IM supplementation reduces BPD 15-26% in ELBW (Tyson 1999 NEJM). Reduces all-cause mortality 15%.",
+    "what_happens_without": "BPD. Impaired lung epithelial repair.",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "Light-protected storage. Cold chain.",
+    "wall_time_s": 0.052773237228393555
+  },
+  {
+    "molecule_name": "Sildenafil",
+    "formula": "C22H30N6O4S",
+    "stage": "NICU pulmonary",
+    "week": 28,
+    "n_atoms": 63,
+    "n_electrons": 252,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 199,
+        "n_qubits": 398,
+        "n_electrons": 252
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 361,
+        "n_qubits": 722,
+        "n_electrons": 252
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 616,
+        "n_qubits": 1232,
+        "n_electrons": 252
+      }
+    },
+    "n_hamiltonian_terms": 1982,
+    "n_commuting_groups": 24,
+    "nuclear_repulsion_energy": 881.4970002600992,
+    "n_tiles": 8,
+    "clinical_role": "PDE5 inhibitor for PPHN when iNO unavailable. Same cGMP pathway.",
+    "what_happens_without": "No fallback when iNO delivery unavailable. PPHN death.",
+    "cost_to_make": "$0.10/dose",
+    "access_barrier": "Patent expired 2013. Generic.",
+    "wall_time_s": 0.09459280967712402
+  },
+  {
+    "molecule_name": "Erythromycin",
+    "formula": "C37H67NO13",
+    "stage": "Term",
+    "week": 37,
+    "n_atoms": 118,
+    "n_electrons": 400,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 322,
+        "n_qubits": 644,
+        "n_electrons": 400
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 593,
+        "n_qubits": 1186,
+        "n_electrons": 400
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 1049,
+        "n_qubits": 2098,
+        "n_electrons": 400
+      }
+    },
+    "n_hamiltonian_terms": 3204,
+    "n_commuting_groups": 48,
+    "nuclear_repulsion_energy": 1226.292928822817,
+    "n_tiles": 16,
+    "clinical_role": "Universal newborn eye prophylaxis. Prokinetic for neonatal gastroparesis.",
+    "what_happens_without": "Ophthalmia neonatorum -> blindness from N. gonorrhoeae.",
+    "cost_to_make": "$0.05/dose",
+    "access_barrier": "None.",
+    "wall_time_s": 0.13179469108581543
+  },
+  {
+    "molecule_name": "Vancomycin",
+    "formula": "C66H75Cl2N9O24",
+    "stage": "NICU",
+    "week": 28,
+    "n_atoms": 176,
+    "n_electrons": 760,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 588,
+        "n_qubits": 1176,
+        "n_electrons": 760
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 1067,
+        "n_qubits": 2134,
+        "n_electrons": 760
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 1797,
+        "n_qubits": 3594,
+        "n_electrons": 760
+      }
+    },
+    "n_hamiltonian_terms": 5864,
+    "n_commuting_groups": 48,
+    "nuclear_repulsion_energy": 3517.252728262729,
+    "n_tiles": 16,
+    "clinical_role": "Last-resort for MRSA/CoNS sepsis. Dominant late-onset NICU pathogen.",
+    "what_happens_without": "MRSA bacteremia: 15-30% mortality without treatment.",
+    "cost_to_make": "$2/course",
+    "access_barrier": "AUC-guided dosing. TDM infrastructure.",
+    "wall_time_s": 0.4313390254974365
+  },
+  {
+    "molecule_name": "CuWO4 Photocatalyst",
+    "formula": "CuWO4",
+    "stage": "NICU environment",
+    "week": 28,
+    "n_atoms": 6,
+    "n_electrons": 135,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 60,
+        "n_qubits": 120,
+        "n_electrons": 135
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 98,
+        "n_qubits": 196,
+        "n_electrons": 135
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 141,
+        "n_qubits": 282,
+        "n_electrons": 135
+      }
+    },
+    "n_hamiltonian_terms": 599,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 1388.0953105420197,
+    "n_tiles": 1,
+    "clinical_role": "Visible-light antimicrobial. Band gap 2.0 eV. Ambient lighting sterilizes continuously.",
+    "what_happens_without": "HAIs without UV/chemical sterilization. 75k+ neonatal deaths/year.",
+    "cost_to_make": "$1/coating",
+    "access_barrier": "Materials fabrication.",
+    "wall_time_s": 0.07241177558898926
+  },
+  {
+    "molecule_name": "TiO2 Photocatalyst Dimer",
+    "formula": "(TiO2)2",
+    "stage": "NICU environment",
+    "week": 28,
+    "n_atoms": 6,
+    "n_electrons": 76,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 50,
+        "n_qubits": 100,
+        "n_electrons": 76
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 80,
+        "n_qubits": 160,
+        "n_electrons": 76
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 116,
+        "n_qubits": 232,
+        "n_electrons": 76
+      }
+    },
+    "n_hamiltonian_terms": 499,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 501.1551229724081,
+    "n_tiles": 1,
+    "clinical_role": "UV photocatalyst. Hydroxyl radicals destroy bacteria, RSV, VOCs on contact.",
+    "what_happens_without": "NICU air contamination.",
+    "cost_to_make": "$1/coating",
+    "access_barrier": "UV lamp availability in LMICs.",
+    "wall_time_s": 0.04744529724121094
   }
 ]
