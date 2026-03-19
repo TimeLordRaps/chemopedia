@@ -59,7 +59,7 @@ Key provisions:
 - Human Rights Bar: entities with documented clinical trial suppression, pay-for-delay settlements, NICU access failures, or equivalent violations are permanently barred
 - Patent thicket laundering: each continuation patent filed to reconstruct prohibited exclusivity raises the restitution floor 25%
 
-The venturi iNO device design (Venturi NO Mixer for inhaled nitric oxide without electronics — described in `narrative.md`) is covered by the same CCUL v1.0 license as the rest of this repository. See `LICENSE` for full terms.
+The venturi iNO device design (Venturi NO Mixer for inhaled nitric oxide without electronics — described in `narrative.md`) is covered by the same Time License v2.0 as the rest of this repository. See `LICENSE` for full terms.
 
 ---
 
