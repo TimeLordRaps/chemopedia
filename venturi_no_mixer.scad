@@ -2,7 +2,7 @@
 // Passive Venturi iNO Delivery Device — Parametric OpenSCAD
 // Author: Tyler "The TimeLord" Roost
 // Date:   2026-03-05
-// License: The Time License v2.0 — see LICENSE
+// License: The Time License v3.0 — see LICENSE
 //
 // No electronics. No sensors. No software. No power.
 // Concentration set by machined geometry.
