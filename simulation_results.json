@@ -1,0 +1,497 @@
+[
+  {
+    "molecule_name": "Molecular Hydrogen",
+    "formula": "H2",
+    "stage": "Benchmark / Industrial",
+    "week": 0,
+    "n_atoms": 2,
+    "n_electrons": 2,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 2,
+        "n_qubits": 4,
+        "n_electrons": 2
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 4,
+        "n_qubits": 8,
+        "n_electrons": 2
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 10,
+        "n_qubits": 20,
+        "n_electrons": 2
+      }
+    },
+    "n_hamiltonian_terms": 19,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 1.215104054054054,
+    "clinical_role": "Benchmark molecule. Industrial precursor (Haber-Bosch). Emerging neuroprotection research in HIE.",
+    "what_happens_without": "No benchmark means no calibration of simulation accuracy.",
+    "cost_to_make": "$1/kg (SMR)",
+    "access_barrier": "None",
+    "wall_time_s": 0.00010204315185546875
+  },
+  {
+    "molecule_name": "Lithium Hydride",
+    "formula": "LiH",
+    "stage": "Calibration",
+    "week": 0,
+    "n_atoms": 2,
+    "n_electrons": 4,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 6,
+        "n_qubits": 12,
+        "n_electrons": 4
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 11,
+        "n_qubits": 22,
+        "n_electrons": 4
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 19,
+        "n_qubits": 38,
+        "n_electrons": 4
+      }
+    },
+    "n_hamiltonian_terms": 59,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 2.4953172413793103,
+    "clinical_role": "Quantum chemistry calibration standard. 4-qubit reference system.",
+    "what_happens_without": "No ground truth for simulation validation.",
+    "cost_to_make": "N/A (calibration only)",
+    "access_barrier": "N/A",
+    "wall_time_s": 0.0004935264587402344
+  },
+  {
+    "molecule_name": "Water (WFI)",
+    "formula": "H2O",
+    "stage": "All stages",
+    "week": 0,
+    "n_atoms": 3,
+    "n_electrons": 10,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 7,
+        "n_qubits": 14,
+        "n_electrons": 10
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 13,
+        "n_qubits": 26,
+        "n_electrons": 10
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 24,
+        "n_qubits": 48,
+        "n_electrons": 10
+      }
+    },
+    "n_hamiltonian_terms": 69,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 10.943909496103968,
+    "clinical_role": "Solvent for all IV preparations, hydration",
+    "what_happens_without": "Dehydration. Death.",
+    "cost_to_make": "$0.001/L (distillation)",
+    "access_barrier": "WFI quality control in low-resource settings",
+    "wall_time_s": 0.0006511211395263672
+  },
+  {
+    "molecule_name": "Molecular Oxygen",
+    "formula": "O2",
+    "stage": "All stages",
+    "week": 0,
+    "n_atoms": 2,
+    "n_electrons": 16,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 10,
+        "n_qubits": 20,
+        "n_electrons": 16
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 18,
+        "n_qubits": 36,
+        "n_electrons": 16
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 28,
+        "n_qubits": 56,
+        "n_electrons": 16
+      }
+    },
+    "n_hamiltonian_terms": 99,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 30.53586754966888,
+    "clinical_role": "Aerobic respiration. Fetal oxygenation via placenta. Neonatal resuscitation.",
+    "what_happens_without": "Hypoxia. Brain damage in minutes. Death.",
+    "cost_to_make": "$0.01/L (PSA concentrator)",
+    "access_barrier": "Oxygen concentrators cost $1000+. 50% of hospitals in Sub-Saharan Africa lack reliable oxygen supply.",
+    "wall_time_s": 0.0012712478637695312
+  },
+  {
+    "molecule_name": "Carbon Dioxide",
+    "formula": "CO2",
+    "stage": "All stages (respiratory monitoring)",
+    "week": 0,
+    "n_atoms": 3,
+    "n_electrons": 22,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 15,
+        "n_qubits": 30,
+        "n_electrons": 22
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 27,
+        "n_qubits": 54,
+        "n_electrons": 22
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 42,
+        "n_qubits": 84,
+        "n_electrons": 22
+      }
+    },
+    "n_hamiltonian_terms": 149,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 62.141944827586215,
+    "clinical_role": "End-tidal CO\u2082 monitoring in ventilated neonates. Blood gas analysis.",
+    "what_happens_without": "Cannot assess ventilation adequacy. Blind ventilator management.",
+    "cost_to_make": "Byproduct of respiration and combustion",
+    "access_barrier": "Capnography equipment costs $2000+. Unavailable in most LMIC NICUs.",
+    "wall_time_s": 0.0027129650115966797
+  },
+  {
+    "molecule_name": "Hydrogen Peroxide",
+    "formula": "H2O2",
+    "stage": "All stages (environmental/sterilization)",
+    "week": 0,
+    "n_atoms": 4,
+    "n_electrons": 18,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 12,
+        "n_qubits": 24,
+        "n_electrons": 18
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 22,
+        "n_qubits": 44,
+        "n_electrons": 18
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 38,
+        "n_qubits": 76,
+        "n_electrons": 18
+      }
+    },
+    "n_hamiltonian_terms": 119,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 38.57033721690297,
+    "clinical_role": "Surface and instrument sterilization in NICU. Anthraquinone process production.",
+    "what_happens_without": "Hospital-acquired infections. 75,000+ neonatal deaths/year from HAIs.",
+    "cost_to_make": "$0.50/L (3% solution)",
+    "access_barrier": "Universally available. Quality control matters \u2014 concentration verification.",
+    "wall_time_s": 0.0017514228820800781
+  },
+  {
+    "molecule_name": "Ammonia",
+    "formula": "NH3",
+    "stage": "Industrial precursor",
+    "week": 0,
+    "n_atoms": 4,
+    "n_electrons": 10,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 8,
+        "n_qubits": 16,
+        "n_electrons": 10
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 15,
+        "n_qubits": 30,
+        "n_electrons": 10
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 29,
+        "n_qubits": 58,
+        "n_electrons": 10
+      }
+    },
+    "n_hamiltonian_terms": 79,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 13.935804957636575,
+    "clinical_role": "Precursor to virtually all nitrogen-containing pharmaceuticals via Haber-Bosch process",
+    "what_happens_without": "No antibiotics, no amino acids, no nucleotides. Civilization collapses.",
+    "cost_to_make": "$300/ton (Haber-Bosch)",
+    "access_barrier": "Industrial commodity. No access barrier.",
+    "wall_time_s": 0.0008296966552734375
+  },
+  {
+    "molecule_name": "Progesterone \u2014 steroid A-ring core",
+    "formula": "C6H8O",
+    "stage": "Conception",
+    "week": 0,
+    "n_atoms": 15,
+    "n_electrons": 52,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 43,
+        "n_qubits": 86,
+        "n_electrons": 52
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 79,
+        "n_qubits": 158,
+        "n_electrons": 52
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 138,
+        "n_qubits": 276,
+        "n_electrons": 52
+      }
+    },
+    "n_hamiltonian_terms": 429,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 309.0669182479925,
+    "clinical_role": "Maintains uterine lining, prevents miscarriage. Supplemented in high-risk pregnancies.",
+    "what_happens_without": "Luteal phase deficiency \u2192 spontaneous abortion. 10-15% of pregnancies fail from insufficient progesterone.",
+    "cost_to_make": "$0.10/dose (micronized oral)",
+    "access_barrier": "Generic but underused in threatened miscarriage protocols in LMICs",
+    "wall_time_s": 0.021197080612182617
+  },
+  {
+    "molecule_name": "Folic Acid (Pteroylglutamic acid) \u2014 pteridine ring core",
+    "formula": "C7H5N3O",
+    "stage": "Conception \u2192 Neural Tube Closure",
+    "week": 0,
+    "n_atoms": 17,
+    "n_electrons": 84,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 65,
+        "n_qubits": 130,
+        "n_electrons": 84
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 118,
+        "n_qubits": 236,
+        "n_electrons": 84
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 193,
+        "n_qubits": 386,
+        "n_electrons": 84
+      }
+    },
+    "n_hamiltonian_terms": 649,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 745.4153597888976,
+    "clinical_role": "Prevents 70% of neural tube defects (spina bifida, anencephaly)",
+    "what_happens_without": "Neural tube defects: 300,000 cases/year globally. Spina bifida, anencephaly, encephalocele.",
+    "cost_to_make": "$0.01/tablet (400 mcg)",
+    "access_barrier": "Available but not supplemented in 50+ countries. WHO Essential Medicine.",
+    "wall_time_s": 0.04913687705993652
+  },
+  {
+    "molecule_name": "Iron(II) aquo complex \u2014 [Fe(H2O)]\u00b2\u207a minimal model",
+    "formula": "FeH2O",
+    "stage": "Neural Tube Closure \u2192 Term",
+    "week": 4,
+    "n_atoms": 4,
+    "n_electrons": 34,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 22,
+        "n_qubits": 44,
+        "n_electrons": 34
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 35,
+        "n_qubits": 70,
+        "n_electrons": 34
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 54,
+        "n_qubits": 108,
+        "n_electrons": 34
+      }
+    },
+    "n_hamiltonian_terms": 219,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 77.72733208195855,
+    "clinical_role": "Hemoglobin synthesis, oxygen transport, fetal iron loading",
+    "what_happens_without": "Maternal anemia \u2192 preterm birth, low birth weight, neonatal anemia. Iron deficiency affects 40% of pregnancies globally.",
+    "cost_to_make": "$0.01/tablet (ferrous sulfate 325mg)",
+    "access_barrier": "Available everywhere. Compliance is the barrier \u2014 GI side effects.",
+    "wall_time_s": 0.0056819915771484375
+  },
+  {
+    "molecule_name": "Calcium ion \u2014 in phosphate context",
+    "formula": "CaO",
+    "stage": "Organogenesis \u2192 Term",
+    "week": 8,
+    "n_atoms": 2,
+    "n_electrons": 20,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 14,
+        "n_qubits": 28,
+        "n_electrons": 20
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 22,
+        "n_qubits": 44,
+        "n_electrons": 20
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 32,
+        "n_qubits": 64,
+        "n_electrons": 20
+      }
+    },
+    "n_hamiltonian_terms": 139,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 32.5457358490566,
+    "clinical_role": "Skeletal mineralization, cardiac function, preeclampsia prevention",
+    "what_happens_without": "Neonatal hypocalcemia, rickets, maternal preeclampsia. WHO recommends Ca supplementation in populations with low dietary calcium.",
+    "cost_to_make": "$0.02/tablet (calcium carbonate 500mg)",
+    "access_barrier": "Cheap. Underused. WHO guideline compliance <30% in Sub-Saharan Africa.",
+    "wall_time_s": 0.002321481704711914
+  },
+  {
+    "molecule_name": "Zinc Sulfate",
+    "formula": "ZnSO4",
+    "stage": "Organogenesis \u2192 Term",
+    "week": 8,
+    "n_atoms": 6,
+    "n_electrons": 78,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 44,
+        "n_qubits": 88,
+        "n_electrons": 78
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 71,
+        "n_qubits": 142,
+        "n_electrons": 78
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 104,
+        "n_qubits": 208,
+        "n_electrons": 78
+      }
+    },
+    "n_hamiltonian_terms": 439,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 576.940440598482,
+    "clinical_role": "DNA synthesis, immune function, wound healing. Zinc deficiency causes growth retardation and congenital malformations.",
+    "what_happens_without": "IUGR, immune deficiency, increased infection susceptibility in neonates",
+    "cost_to_make": "$0.01/tablet",
+    "access_barrier": "Cheap commodity. WHO-recommended for diarrhea. Underused in prenatal care.",
+    "wall_time_s": 0.02241063117980957
+  },
+  {
+    "molecule_name": "Dexamethasone \u2014 fluorinated steroid A-ring",
+    "formula": "C6H7FO",
+    "stage": "Viability Threshold (antenatal)",
+    "week": 24,
+    "n_atoms": 15,
+    "n_electrons": 60,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 47,
+        "n_qubits": 94,
+        "n_electrons": 60
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 86,
+        "n_qubits": 172,
+        "n_electrons": 60
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 147,
+        "n_qubits": 294,
+        "n_electrons": 60
+      }
+    },
+    "n_hamiltonian_terms": 469,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 386.15007841341964,
+    "clinical_role": "Accelerates fetal lung maturation. The single most impactful intervention in neonatal medicine \u2014 $0.20/course, prevents RDS, saves 500,000 lives/year if universally available.",
+    "what_happens_without": "Respiratory distress syndrome. Leading cause of neonatal death in preterm infants. 1 million deaths/year from RDS.",
+    "cost_to_make": "$0.20/course (two 12mg IM injections)",
+    "access_barrier": "WHO Essential Medicine. Available but underused \u2014 10% coverage in LMICs where 99% of neonatal deaths occur.",
+    "wall_time_s": 0.025360107421875
+  },
+  {
+    "molecule_name": "Nitric Oxide",
+    "formula": "NO",
+    "stage": "Preterm Risk \u2192 Term",
+    "week": 24,
+    "n_atoms": 2,
+    "n_electrons": 15,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 10,
+        "n_qubits": 20,
+        "n_electrons": 15
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 18,
+        "n_qubits": 36,
+        "n_electrons": 15
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 28,
+        "n_qubits": 56,
+        "n_electrons": 15
+      }
+    },
+    "n_hamiltonian_terms": 99,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 28.246231103388357,
+    "clinical_role": "Pulmonary vasodilator for persistent pulmonary hypertension of the newborn (PPHN)",
+    "what_happens_without": "~15,000 PPHN deaths/year. Patent on a tube with a hole (Mallinckrodt INOmax).",
+    "cost_to_make": "$0.10/dose from NO\u2082/N\u2082 gas cylinders",
+    "access_barrier": "Patent on electronic delivery device. Venturi bypass in chemopedia eliminates this.",
+    "wall_time_s": 0.0012278556823730469
+  },
+  {
+    "molecule_name": "Sodium Bicarbonate",
+    "formula": "NaHCO3",
+    "stage": "Preterm \u2192 Term (NICU)",
+    "week": 28,
+    "n_atoms": 6,
+    "n_electrons": 42,
+    "qubit_estimates": {
+      "sto-3g": {
+        "n_spatial_orbitals": 30,
+        "n_qubits": 60,
+        "n_electrons": 42
+      },
+      "6-31g": {
+        "n_spatial_orbitals": 51,
+        "n_qubits": 102,
+        "n_electrons": 42
+      },
+      "cc-pvdz": {
+        "n_spatial_orbitals": 79,
+        "n_qubits": 158,
+        "n_electrons": 42
+      }
+    },
+    "n_hamiltonian_terms": 299,
+    "n_commuting_groups": 3,
+    "nuclear_repulsion_energy": 177.7075364206419,
+    "clinical_role": "Corrects metabolic acidosis in critically ill neonates",
+    "what_happens_without": "Uncorrected acidosis \u2192 cardiac dysfunction, organ failure",
+    "cost_to_make": "$0.05/vial (8.4% solution)",
+    "access_barrier": "Commodity chemical. Access limited only by IV preparation infrastructure.",
+    "wall_time_s": 0.010393381118774414
+  }
+]
