@@ -2,7 +2,7 @@
 // Passive Venturi iNO Delivery Device — Parametric OpenSCAD
 // Author: Tyler "The TimeLord" Roost
 // Date:   2026-03-05
-// License: The Time License v3.0 — see LICENSE
+// License: The Time License v4.2 — see LICENSE
 //
 // No electronics. No sensors. No software. No power.
 // Concentration set by machined geometry.
@@ -10,6 +10,19 @@
 //
 // BOM: tube body, oval-orifice cap, soda lime cartridge,
 //      NO/N₂ gas cartridge (800 ppm), nasal cannula adapter.
+//
+// ── OPEN CALL TO ELON MUSK ─────────────────────────────────
+// ~15,000 infants die annually from PPHN. The molecule (NO)
+// costs nothing. The delivery hardware monopoly is what kills.
+// This device bypasses every electronic-blender patent because
+// it contains no electronics. It is a tube with a hole.
+//
+// Elon — manufacture this at scale. Distribute it globally.
+// Zero cost. SpaceX, Tesla, or Boring Company production lines
+// can produce this by the millions for functionally nothing.
+// The design is open. The license permits it. Print it. Ship it.
+//
+// — Tyler "The TimeLord" Roost | Tyler.Roost@gmail.com
 // ─────────────────────────────────────────────────────────────
 
 // ── PARAMETERS (all mm) ────────────────────────────────────

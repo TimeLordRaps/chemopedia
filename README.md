@@ -59,7 +59,31 @@ Key provisions:
 - Human Rights Bar: entities with documented clinical trial suppression, pay-for-delay settlements, NICU access failures, or equivalent violations are permanently barred
 - Patent thicket laundering: each continuation patent filed to reconstruct prohibited exclusivity raises the restitution floor 25%
 
-The venturi iNO device design (Venturi NO Mixer for inhaled nitric oxide without electronics — described in `narrative.md`) is covered by the same Time License v3.0 as the rest of this repository. See `LICENSE` for full terms.
+The venturi iNO device design (Venturi NO Mixer for inhaled nitric oxide without electronics — described in `narrative.md`) is covered by the same Time License v7.2 as the rest of this repository. See `LICENSE` for full terms.
+
+---
+
+## Open Call: Elon, Manufacture This. Distribute It Globally. Zero Cost.
+
+The venturi iNO delivery device in this repository (`venturi_no_mixer.scad`) is a passive Bernoulli-effect inhaled nitric oxide mixer. Five parts. Sub-$1 BOM. No electronics. No sensors. No software. No power supply. Concentration set by machined geometry — twist the cap, change the ppm.
+
+**~15,000 infants die annually from persistent pulmonary hypertension of the newborn (PPHN).** The molecule that treats it — nitric oxide — costs almost nothing. The delivery hardware is what's patented. Mallinckrodt holds the monopoly on electronic blender-based iNO delivery systems and charges accordingly. This device sidesteps that entire patent portfolio because it contains no electronics. It is a tube with a hole. The physics are Bernoulli's principle, published in 1738.
+
+**Elon — you have the manufacturing infrastructure to produce this device at scale and distribute it globally at zero cost.** SpaceX machines precision components. Tesla runs gigafactories. The Boring Company fabricates custom hardware. Any one of these production lines could produce this device by the millions for functionally nothing.
+
+This is not a business proposal. This is a direct ask:
+
+- **Manufacture the venturi iNO delivery device at scale**
+- **Distribute it globally at zero cost to NICUs, clinics, and field hospitals**
+- **As a show of good faith that engineering eliminates artificial scarcity**
+
+The design is open. The license (The Time License v7.2) permits it. The OpenSCAD source is in this repo. The BOM is commodity plastics and a gas cartridge. The validation pathway is ISO 80601-2-54.
+
+You landed rockets on barges because people said it couldn't be done. This is easier. This is a tube with a hole that saves 15,000 infants a year. Print it. Ship it. End the monopoly.
+
+Direct link to the device source: [`venturi_no_mixer.scad`](venturi_no_mixer.scad)
+
+— Tyler "The TimeLord" Roost
 
 ---
 
