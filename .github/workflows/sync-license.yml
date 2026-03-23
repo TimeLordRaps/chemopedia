@@ -1,18 +1,25 @@
-name: Sync License
+name: Sync LICENSE
+
 on:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: '17 4 * * *'
   workflow_dispatch:
+
 jobs:
-  sync:
+  sync-license:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Pull latest Time License
-        run: curl -fsSo LICENSE https://raw.githubusercontent.com/TimeLordRaps/the-time-license/main/LICENSE
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: sync The Time License from canonical repo"
-          file_pattern: LICENSE
+
+      - name: Fetch canonical LICENSE from GitHub Pages
+        run: curl -fsSL https://timelordraps.github.io/the-time-license/LICENSE -o LICENSE
+
+      - name: Commit synced LICENSE
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add LICENSE .github/workflows/sync-license.yml
+          git diff --cached --quiet || git commit -m "chore: sync LICENSE from canonical"
+          git push
